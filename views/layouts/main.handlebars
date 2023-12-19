@@ -1,0 +1,44 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Boxing Blog</title>
+    <link rel="stylesheet" href="/css/style.css" />
+  </head>
+  <body>
+    <header class="header">
+      <nav class="navbar">
+        <div class="logo-container">
+          <a href="/" class="navbar__logo">BOXING BLOG</a>
+        </div>
+        <ul class="navbar__list">
+          {{#if logged_in}}
+            <li class="navbar__item"><a
+                href="/dashboard"
+                class="navbar__link"
+              >Dashboard</a></li>
+            <li class="navbar__item"><a
+                href="/logout"
+                class="navbar__link"
+                id="logout-link"
+              >Logout</a></li>
+          {{else}}
+            <li class="navbar__item"><a
+                href="/login"
+                class="navbar__link"
+              >Login</a></li>
+          {{/if}}
+        </ul>
+      </nav>
+    </header>
+
+    <main class="main-content">
+      {{{body}}}
+    </main>
+
+    {{#if logged_in}}
+      <script src="/js/logout.js"></script>
+    {{/if}}
+  </body>
+</html>

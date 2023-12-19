@@ -91,7 +91,6 @@ video {
   padding: 0;
   border: 0;
   font-size: 100%;
-  font: inherit;
   vertical-align: baseline;
 }
 
@@ -139,6 +138,7 @@ table {
 
 /* Set core body defaults */
 body {
+  background: #e1dfdf;
   min-height: 100vh;
   scroll-behavior: smooth;
   text-rendering: optimizeSpeed;
@@ -157,7 +157,7 @@ input,
 button,
 textarea,
 select {
-  font: inherit;
+  font-family: "Poppins", sans-serif;
 }
 
 /* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
@@ -174,4 +174,121 @@ select {
     transition-duration: 0.01ms !important;
     scroll-behavior: auto !important;
   }
+}
+
+/* NAVBAR STYLES */
+.header {
+  background-color: #100f0f;
+  padding: 10px 0;
+}
+
+.navbar {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+}
+
+.logo-container {
+  flex-grow: 1;
+  text-align: center;
+}
+
+.navbar__logo {
+  display: inline-block;
+  font-size: 24px;
+  color: #dddadb;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.navbar__list {
+  display: flex;
+  margin-left: auto;
+}
+
+.navbar__item {
+  padding: 15px;
+}
+
+.navbar__link {
+  text-decoration: none;
+  color: #dddadb;
+  font-size: 18px;
+  transition: color 0.3s ease;
+}
+
+.navbar__link:hover {
+  color: #b6b0b1;
+}
+
+/* FORM STYLING */
+.form-container {
+  width: 90%;
+  max-width: 500px;
+  margin: auto;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 2em;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  z-index: 1000;
+}
+
+.form-title {
+  margin-bottom: 1em;
+  font-size: 1.75rem;
+  text-align: center;
+  font-weight: 600;
+  color: #080707;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+}
+
+.form-input {
+  width: 100%;
+  padding: 0.75em;
+  border: 1px solid transparent;
+  border-radius: 16px;
+  outline: none;
+  transition: border-color 0.3s ease-in-out;
+  background: none;
+}
+
+.form-input:hover {
+  border-color: #978e8f;
+}
+
+.form-input:focus {
+  border-color: #504a4b;
+}
+
+.form-button {
+  padding: 0.75em;
+  background-color: #ff0000;
+  color: #e1dfdf;
+  border: none;
+  border-radius: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.form-button:hover {
+  background-color: #ff4c4c;
+}
+
+.auth-switch {
+  text-align: center;
+  margin-top: 1em;
+}
+
+.auth-switch a {
+  color: #080707;
 }
