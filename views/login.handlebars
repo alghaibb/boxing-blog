@@ -1,0 +1,27 @@
+<div class="form-container">
+  <h2 class="form-title">Login</h2>
+  <form id="login-form" action="/login" method="post" class="form">
+    <input
+      id="login-email"
+      type="text"
+      placeholder="Email"
+      name="email"
+      class="form-input"
+      required
+    />
+    <input
+      id="login-password"
+      type="password"
+      placeholder="Password"
+      name="password"
+      class="form-input"
+      required
+    />
+    <button type="submit" class="form-button">Login</button>
+
+    <p class="auth-switch">Don't have an account? Sign up
+      <a href="/signup">here</a></p>
+  </form>
+</div>
+
+<script src="/js/login.js"></script>
