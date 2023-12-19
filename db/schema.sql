@@ -1,0 +1,3 @@
+DROP DATABASE IF EXISTS boxing_db;
+
+CREATE DATABASE boxing_db;
