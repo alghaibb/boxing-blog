@@ -19,10 +19,14 @@ router.get('/', async (req, res) => {
     res.render('homepage', {
       blogs,
       logged_in: req.session.logged_in,
+      name: req.session.name,
     });
+    console.log({ blogs, logged_in: req.session.logged_in, name: req.session.name });
   } catch (err) {
     res.status(500).json(err);
   }
+
+
 });
 
 // Login route

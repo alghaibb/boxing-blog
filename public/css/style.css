@@ -292,3 +292,23 @@ select {
 .auth-switch a {
   color: #080707;
 }
+
+/* Homepage Styles */
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 20px;
+}
+
+main h1 {
+  font-size: 2.5rem;
+  color: #080707;
+}
+
+@media screen and (max-width: 768px) {
+  main h1 {
+    font-size: 2rem;
+  }
+}
